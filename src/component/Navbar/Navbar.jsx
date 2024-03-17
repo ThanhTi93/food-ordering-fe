@@ -4,7 +4,12 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from 'react';
 import { pink } from '@mui/material/colors';
 import "./Navbar.scss";
-export const  Navbar = ()  => {
+import { Person } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
+export const Navbar = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className='px-5 sticky z-50 py-[.8rem] bg-[#e91e63] lg:px-20 flex justify-between' >
             <div className='flex items-center space-x-4'>
@@ -18,10 +23,15 @@ export const  Navbar = ()  => {
                         <SearchIcon style={{ color: "white" }} sx={{ fontSize: "1.5rem" }} />
                     </IconButton>
                 </div>
-                <div>
-                    <Avatar sx={{ backgroundColor: "white", color: pink.A400 }}>
+                <div>{
+                    false ? <Avatar sx={{ backgroundColor: "white", color: pink.A400 }}>
                         T
-                    </Avatar>
+                    </Avatar> :
+                        <IconButton onClick={() => navigate("/account/login")}>
+                            <Person />
+                        </IconButton>
+                }
+
                 </div>
                 <div>
                     <IconButton>

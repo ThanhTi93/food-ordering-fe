@@ -8,7 +8,7 @@ import { Button, Card } from '@mui/material';
 import Box from '@mui/material/Box';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 // import * as Yup from "Yup";
-const style = {
+export const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',

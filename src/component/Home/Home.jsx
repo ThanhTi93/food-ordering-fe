@@ -1,10 +1,9 @@
 import React from 'react';
-import "./Home.scss" ;
+import "./Home.scss";
 import MultiItemCarousel from './MultiItemCarousel';
 import RestaurantCard from '../Restaurant/RestaurantCard';
-
 function Home(props) {
-const restaurant = [1,1,1,1,1,1,1,1];
+    const restaurant = [1, 1, 1, 1, 1, 1, 1, 1];
     return (
         <div>
             <section className='banner -z-50 relative flex flex-col justify-center items-center '>
@@ -18,12 +17,12 @@ const restaurant = [1,1,1,1,1,1,1,1];
             </section>
             <section className='p-10 lg:py-10 lg:px-20'>
                 <h1 className='text-2xl font-semibold text-gray-400 py-3 pb-10'>Top Meels</h1>
-                <MultiItemCarousel/>
+                <MultiItemCarousel />
             </section>
-            <section className='px-5 lg:px-20 ' >
+            <section className='px-5 lg:px-20 pt-10' >
                 <h1 className='text-2xl font-semibold text-gray-400 py-3'>Order From Our Handpicked Favorites</h1>
                 <div className='flex flex-wrap items-center justify-around'>
-                  {restaurant.map((item) => <RestaurantCard/>)}
+                    {restaurant.map((item) => <RestaurantCard />)}
                 </div>
             </section>
         </div>
